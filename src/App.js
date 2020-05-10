@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import React from "react";
+
+import Grid from "@material-ui/core/Grid";
+import Calculator from "./Calculator";
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
+
+// home brewed theme:
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#ffffff",
+    },
+    secondary: {
+      main: "#E33E7F",
+    },
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MuiThemeProvider theme={theme}>
+      <div className="App">
+        <Grid container justify="center" alignItems="center" spacing={3}>
+          <Grid item xs={12} md={6} lg={4} xl={3} alignItems="center">
+            <Calculator></Calculator>
+          </Grid>
+        </Grid>
+      </div>
+    </MuiThemeProvider>
   );
 }
 
