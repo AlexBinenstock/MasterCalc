@@ -1,0 +1,21 @@
+body {
+  background: url("./assets/app-bg.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.header {
+  background-color: rgba(223, 203, 255, 0.37);
+  min-height: 36px;
+  pointer-events: all;
+  text-align: right;
+  margin-bottom: 40px;
+  .title {
+    float: left;
+    margin: 8px 8px 8px 16px;
+    font-size: 22px;
+    font-weight: 400;
+  }
+}

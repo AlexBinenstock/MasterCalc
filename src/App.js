@@ -1,11 +1,11 @@
-import "./App.css";
+import "./App.scss";
 
-import React from "react";
+import React, { useState } from "react";
 
 import Grid from "@material-ui/core/Grid";
-import Calculator from "./Calculator";
+import CalculatorsHub from "./CalculatorsHub";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
-
+import Wrapper from "./Wrapper";
 // home brewed theme:
 const theme = createMuiTheme({
   palette: {
@@ -21,12 +21,8 @@ const theme = createMuiTheme({
 function App() {
   return (
     <MuiThemeProvider theme={theme}>
-      <div className="App">
-        <Grid container justify="center" alignItems="center" spacing={3}>
-          <Grid item xs={12} md={6} lg={4} xl={3} alignItems="center">
-            <Calculator></Calculator>
-          </Grid>
-        </Grid>
+      <div className="App" style={{ pointerEvents: "none" }}>
+        <Wrapper></Wrapper>
       </div>
     </MuiThemeProvider>
   );
