@@ -6,7 +6,11 @@ body {
   background-size: cover;
 }
 
-.header {
+header {
+  pointer-events: all;
+}
+
+.calc-header {
   background-color: rgba(223, 203, 255, 0.37);
   min-height: 36px;
   pointer-events: all;

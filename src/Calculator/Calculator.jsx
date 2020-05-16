@@ -118,7 +118,7 @@ const Calculator = ({ identifier }) => {
       style={{ pointerEvents: "none" }}
     >
       <Grid
-        className={"calculator-wrapper"}
+        className={"calculator-grid-container"}
         item
         xs={12}
         style={{ pointerEvents: "none" }}
@@ -347,25 +347,25 @@ const Calculator = ({ identifier }) => {
               <span onClick={handleLabelClick}>{calcLabel}</span>
             </div>
           ) : (
-            <span class={"calc-label calc-label-input"}>
-              <IconButton
-                onClick={handleLabelInputBlur}
-                aria-label="edit"
-                size="small"
-              >
-                <SaveIcon fontSize="inherit" />
-              </IconButton>
-              <input
-                onBlur={handleLabelInputBlur}
-                placeholder={calcLabel}
-                class={""}
-                type="text"
-                ref={(calcInput) => {
-                  setCalcInputRef(calcInput);
-                }}
-              />
-            </span>
-          )}
+              <span class={"calc-label calc-label-input"}>
+                <IconButton
+                  onClick={handleLabelInputBlur}
+                  aria-label="edit"
+                  size="small"
+                >
+                  <SaveIcon fontSize="inherit" />
+                </IconButton>
+                <input
+                  onBlur={handleLabelInputBlur}
+                  placeholder={calcLabel}
+                  class={""}
+                  type="text"
+                  ref={(calcInput) => {
+                    setCalcInputRef(calcInput);
+                  }}
+                />
+              </span>
+            )}
         </Paper>
       </Grid>{" "}
     </Grid>
