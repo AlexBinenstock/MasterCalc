@@ -4,6 +4,17 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  &:after {
+    background: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    content: "";
+    opacity: 0.8;
+    z-index: -20;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 header {
@@ -11,11 +22,13 @@ header {
 }
 
 .calc-header {
-  background-color: rgba(223, 203, 255, 0.37);
   min-height: 36px;
   pointer-events: all;
   text-align: right;
   margin-bottom: 40px;
+  path {
+    color: white;
+  }
   .title {
     float: left;
     margin: 8px 8px 8px 16px;

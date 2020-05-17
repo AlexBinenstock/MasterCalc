@@ -1,0 +1,17 @@
+.count-container {
+  position: relative;
+  margin: 12px auto;
+  padding: 36px 0;
+  width: fit-content;
+  pointer-events: all;
+  .count-input {
+    margin: 8px;
+  }
+  .count-buttons {
+    position: relative;
+    width: fit-content;
+    display: block;
+    margin: 0 auto;
+    padding-top: 8px;
+  }
+}

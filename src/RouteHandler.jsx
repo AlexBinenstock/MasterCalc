@@ -14,7 +14,7 @@ import CountDown from "./CountDown/CountDown";
 const routes = { CALC: "calculator", COUNTDOWN: "countdown" };
 
 const RouteHandler = () => {
-  const [route, setRoute] = useState(routes.CALC);
+  const [route, setRoute] = useState(routes.COUNTDOWN);
 
   const renderSwitch = (routeToRender) => {
     switch (routeToRender) {
@@ -23,7 +23,7 @@ const RouteHandler = () => {
       case routes.COUNTDOWN:
         return <CountDown />;
       default:
-        return <CalcWrapper />;
+        return <CountDown />;
     }
   };
 
@@ -31,10 +31,6 @@ const RouteHandler = () => {
     <Fragment>
       <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6">Caclulator</Typography>
           <Button onClick={() => setRoute(routes.CALC)} color="inherit">
             Calculator
           </Button>
